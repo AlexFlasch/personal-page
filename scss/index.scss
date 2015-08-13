@@ -1,0 +1,107 @@
+// out: ../css/index.css
+
+@import "settings";
+
+* {
+    background-origin: border-box; //height and width include everything but margin
+    font-family: $lato;
+    font-weight: lighter;
+    margin: 0;
+}
+
+body {
+    background: $secondaryDark;
+}
+
+body ::selection {
+    background: $primaryDark;
+    color: $secondaryDark;
+}
+
+header {
+    background: $primaryDark;
+    color: $textLight;
+    min-height: 500px;
+    text-align: center;
+
+    ::selection {
+        background: $secondaryDark;
+        color: $primaryDark;
+    }
+
+    h1 {
+        padding-top: 50px;
+    }
+
+    p {
+        padding-top: 10%;
+        padding-bottom: 30px;
+    }
+}
+
+.circle-img {
+    position: relative;
+    border: 2px solid $primaryDark;
+    border-radius: 100%;
+    z-index: 2;
+}
+
+section {
+    min-height: 500px;
+}
+
+nav {
+    background: $primaryDark;
+    color: $textLight;
+    min-height: 35px;
+
+    transition: all 0.25s;
+
+    & > ul {
+        text-align: right;
+        list-style-type: none;
+
+        & > li {
+            display: inline;
+
+            & > a {
+                font-size: 1.5em;
+                text-decoration: none;
+                margin-right: 30px;
+                color: $textLight;
+            }
+        }
+    }
+}
+
+nav.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    opacity: .6;
+
+    transition: all 0.25s;
+}
+
+.bottom-arrow {
+    height: 76px;
+
+    svg {
+        background: $primaryDark;
+        fill: $secondaryDark;
+    }
+}
+
+.img-container {
+    position: relative;
+    width: 256px;
+    height: auto;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.anim-circle {
+    position: absolute;
+}

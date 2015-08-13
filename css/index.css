@@ -1,0 +1,75 @@
+* {
+  background-origin: border-box;
+  font-family: "Lato", sans-serif;
+  font-weight: lighter;
+  margin: 0; }
+
+body {
+  background: #2574a9; }
+
+body ::selection {
+  background: #22313f;
+  color: #2574a9; }
+
+header {
+  background: #22313f;
+  color: #2574a9;
+  min-height: 500px;
+  text-align: center; }
+  header ::selection {
+    background: #2574a9;
+    color: #22313f; }
+  header h1 {
+    padding-top: 50px; }
+  header p {
+    padding-top: 10%;
+    padding-bottom: 30px; }
+
+.circle-img {
+  position: relative;
+  border: 2px solid #22313f;
+  border-radius: 100%;
+  z-index: 2; }
+
+section {
+  min-height: 500px; }
+
+nav {
+  background: #22313f;
+  color: #2574a9;
+  min-height: 35px;
+  transition: all 0.25s; }
+  nav > ul {
+    text-align: right;
+    list-style-type: none; }
+    nav > ul > li {
+      display: inline; }
+      nav > ul > li > a {
+        font-size: 1.5em;
+        text-decoration: none;
+        margin-right: 30px;
+        color: #2574a9; }
+
+nav.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: .6;
+  transition: all 0.25s; }
+
+.bottom-arrow {
+  height: 76px; }
+  .bottom-arrow svg {
+    background: #22313f;
+    fill: #2574a9; }
+
+.img-container {
+  position: relative;
+  width: 256px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px; }
+
+.anim-circle {
+  position: absolute; }
