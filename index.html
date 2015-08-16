@@ -11,19 +11,25 @@
     <!-- js -->
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/greensock/TweenMax.js"></script>
+    <script type="text/javascript" src="js/greensock/TimelineMax.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
 
 </head>
 <body>
     <header>
-        <h1>My name is Alex Flasch</h1>
-        <div class="img-container">
-            <img class="circle-img" src="img/me.png" alt="me">
+        <div class="container">
+            <h1>My name is Alex Flasch</h1>
+            <div class="center-container">
+                <div class="img-container">
+                    <img class="circle-img" src="img/me.png" alt="me">
+                </div>
+            </div>
+            <div class="arrow-container">
+                <svg class="arrow-down" height="100%" preserveAspectRatio="none" version="1.1" viewBox="0 0 100 100" width="100%" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 0 50 L 50 100 L 100 50" stroke-width="3"></path>
+                </svg>
+            </div>
         </div>
-        <p>
-            I'm currently a student at the University of Wisconsin-Oshkosh and I'm
-            studying Computer Science.
-        </p>
     </header>
     <nav>
         <div class="title-container">
@@ -36,24 +42,79 @@
             <li><a href="#contact-me">Contact Me</a></li>
         </ul>
     </nav>
-    <div class="bottom-arrow">
-        <svg class="decor" height="100%" preserveAspectRatio="none" version="1.1" viewBox="0 0 100 100" width="100%" xmlns="http://www.w3.org/2000/svg">
-    		<path d="M0 0 L50 100 L100 0 L100 100 L0 100" stroke-width="0"></path>
-    	</svg>
-    </div>
     <div class="content">
+
+        <div class="effect effect1">
+            <div class="decor-bottom">
+                <svg class="decor" height="100%" preserveAspectRatio="none" version="1.1" viewBox="0 0 100 100" width="100%" xmlns="http://www.w3.org/2000/svg">
+            		<path d="M0 100 L100 0 L0 0 Z" stroke-width="0"></path>
+            	</svg>
+            </div>
+            <div class="decor-top">
+                <svg class="decor" height="100%" preserveAspectRatio="none" version="1.1" viewBox="0 0 100 100" width="100%" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 100 L100 0 L100 100 Z" stroke-width="0"></path>
+                </svg>
+            </div>
+        </div>
         <section id="about-me">
-            About me things
+            <span class="h2 center">About Me</span>
+            <div class="container">
+                <p>
+                    I'm currently a student at the University of Wisconsin-Oshkosh and I'm
+                    studying Computer Science.
+                </p>
+            </div>
         </section>
+
+        <div class="effect effect2">
+            <div class="decor-bottom">
+                <svg class="decor" height="100%" preserveAspectRatio="none" version="1.1" viewBox="0 0 100 100" width="100%" xmlns="http://www.w3.org/2000/svg">
+            		<path d="M0 0 L100 100 L100 0 Z" stroke-width="0"></path>
+            	</svg>
+            </div>
+            <div class="decor-top">
+                <svg class="decor" height="100%" preserveAspectRatio="none" version="1.1" viewBox="0 0 100 100" width="100%" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0 L100 100 L0 100 Z" stroke-width="0"></path>
+                </svg>
+            </div>
+        </div>
         <section id="experience">
-            Experience things
+            <span class="h2 center">Experience</span>
         </section>
+
+        <div class="effect effect3">
+            <div class="decor-bottom">
+                <svg class="decor" height="100%" preserveAspectRatio="none" version="1.1" viewBox="0 0 100 100" width="100%" xmlns="http://www.w3.org/2000/svg">
+            		<path d="M0 100 L100 0 L0 0 Z" stroke-width="0"></path>
+            	</svg>
+            </div>
+            <div class="decor-top">
+                <svg class="decor" height="100%" preserveAspectRatio="none" version="1.1" viewBox="0 0 100 100" width="100%" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 100 L100 0 L100 100 Z" stroke-width="0"></path>
+                </svg>
+            </div>
+        </div>
         <section id="projects">
-            Project things
+            <span class="h2 center">Projects</span>
         </section>
+
+
+        <div class="effect effect4">
+            <div class="decor-bottom">
+                <svg class="decor" height="100%" preserveAspectRatio="none" version="1.1" viewBox="0 0 100 100" width="100%" xmlns="http://www.w3.org/2000/svg">
+            		<path d="M0 0 L100 100 L100 0 Z" stroke-width="0"></path>
+            	</svg>
+            </div>
+            <div class="decor-top">
+                <svg class="decor" height="100%" preserveAspectRatio="none" version="1.1" viewBox="0 0 100 100" width="100%" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0 L100 100 L0 100 Z" stroke-width="0"></path>
+                </svg>
+            </div>
+        </div>
         <section id="contact-me">
-            Contact info
+            <span class="h2 center">Contact Me</span>
         </section>
+
     </div>
 </body>
 </html>

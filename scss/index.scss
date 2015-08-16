@@ -10,7 +10,7 @@
 }
 
 body {
-    background: $secondaryDark;
+    background: #34495E;
 }
 
 body ::selection {
@@ -18,10 +18,45 @@ body ::selection {
     color: $secondaryDark;
 }
 
+.h1 {
+    display: block;
+
+    font-size: 3em;
+}
+.h2 {
+    display: block;
+
+    font-size: 2.66em;
+}
+.h3 {
+    display: block;
+
+    font-size: 2.33em;
+}
+.h4 {
+    display: block;
+
+    font-size: 2em;
+}
+.h5 {
+    display: block;
+
+    font-size: 1.66em;
+}
+.h6 {
+    display: block;
+
+    font-size: 1.33em;
+}
+
+.center {
+    text-align: center;
+}
+
 header {
     background: $primaryDark;
     color: $textLight;
-    min-height: 500px;
+    min-height: 96.5vh;
     text-align: center;
 
     ::selection {
@@ -37,6 +72,41 @@ header {
         padding-top: 10%;
         padding-bottom: 30px;
     }
+
+    .container {
+        padding-top: 30vh; //arbitrary... just looks nice I guess.
+    }
+
+    .center-container {
+        width: 260px;
+        height: 260px;
+    }
+
+    .arrow-container {
+        position: relative;
+
+        min-height: 200px;
+        max-width: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 75px;
+    }
+}
+
+.arrow-down {
+    position: absolute;
+
+    left: 0;
+
+    width: 50px;
+    height: 50px;
+    margin-top: 75px;
+
+    stroke: $accentDark;
+    fill: transparent;
+    background: transparent;
+
+    opacity: 1;
 }
 
 .circle-img {
@@ -48,21 +118,38 @@ header {
 
 section {
     min-height: 500px;
+    background-color: $primaryDark;
+    color: $textLight;
 }
 
 nav {
     background: $primaryDark;
     color: $textLight;
-    min-height: 35px;
+    min-height: 37px;
 
     transition: all 0.25s;
 
     & > ul {
+        position: absolute;
+        bottom: 5px;
+        right: 0;
+
         text-align: right;
         list-style-type: none;
 
         & > li {
             display: inline;
+            padding-bottom: 3px;
+
+            transition: all 0.5s;
+
+            &:hover {
+                border-bottom-color: $accentDark;
+                border-bottom-width: 5px;
+                border-bottom-style: solid;
+
+                transition: all 0.5s;
+            }
 
             & > a {
                 font-size: 1.5em;
@@ -74,34 +161,77 @@ nav {
     }
 }
 
+.container {
+    max-width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title-container {
+    position: absolute;
+    bottom: 8px;
+}
+
+.img-container {
+    position: relative;
+}
+
+.center-container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
 nav.fixed {
     position: fixed;
     top: 0;
     width: 100%;
     opacity: .6;
 
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: $accentDark;
+
+    z-index: 999;
+
     transition: all 0.25s;
 }
 
-.bottom-arrow {
+.decor-top {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
     height: 76px;
+    width: 100%;
 
     svg {
-        background: $primaryDark;
-        fill: $secondaryDark;
+        background: transparent;
+        fill: $primaryDark;
     }
 }
 
-.img-container {
-    position: relative;
-    width: 256px;
-    height: auto;
+.decor-bottom {
+    height: 76px;
 
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
+    svg {
+        background: transparent;
+        fill: $primaryDark;
+    }
 }
 
 .anim-circle {
     position: absolute;
+    background-color: $secondaryDark;
+    border-radius: 100%;
+    z-index: 1;
+}
+
+.effect {
+    position: relative;
+
+    min-height: 500px;
+    max-height: 500px;
+
+
 }
