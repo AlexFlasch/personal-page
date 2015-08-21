@@ -5,25 +5,75 @@
   margin: 0; }
 
 body {
-  background: #2574a9; }
+  background: #34495E; }
 
 body ::selection {
   background: #22313f;
-  color: #2574a9; }
+  color: #4B77Be; }
+
+.h1 {
+  display: block;
+  font-size: 3em; }
+
+.h2 {
+  display: block;
+  font-size: 2.66em; }
+
+.h3 {
+  display: block;
+  font-size: 2.33em; }
+
+.h4 {
+  display: block;
+  font-size: 2em; }
+
+.h5 {
+  display: block;
+  font-size: 1.66em; }
+
+.h6 {
+  display: block;
+  font-size: 1.33em; }
+
+.center {
+  text-align: center; }
 
 header {
   background: #22313f;
-  color: #2574a9;
-  min-height: 500px;
+  color: #4B77Be;
+  min-height: 96.5vh;
   text-align: center; }
   header ::selection {
-    background: #2574a9;
+    background: #4B77Be;
     color: #22313f; }
   header h1 {
     padding-top: 50px; }
   header p {
     padding-top: 10%;
     padding-bottom: 30px; }
+  header .container {
+    padding-top: 30vh; }
+  header .center-container {
+    width: 260px;
+    height: 260px; }
+  header .arrow-container {
+    position: relative;
+    min-height: 200px;
+    max-width: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 75px; }
+
+.arrow-down {
+  position: absolute;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  margin-top: 75px;
+  stroke: #36d7b7;
+  fill: transparent;
+  background: transparent;
+  opacity: 1; }
 
 .circle-img {
   position: relative;
@@ -32,44 +82,95 @@ header {
   z-index: 2; }
 
 section {
-  min-height: 500px; }
+  min-height: 500px;
+  background-color: #22313f;
+  color: #4B77Be; }
 
 nav {
   background: #22313f;
-  color: #2574a9;
-  min-height: 35px;
+  color: #4B77Be;
+  min-height: 37px;
   transition: all 0.25s; }
   nav > ul {
+    position: absolute;
+    bottom: 5px;
+    right: 0;
     text-align: right;
     list-style-type: none; }
     nav > ul > li {
-      display: inline; }
+      display: inline;
+      padding-bottom: 3px;
+      transition: all 0.5s; }
+      nav > ul > li:hover {
+        border-bottom-color: #36d7b7;
+        border-bottom-width: 5px;
+        border-bottom-style: solid;
+        transition: all 0.5s; }
       nav > ul > li > a {
         font-size: 1.5em;
         text-decoration: none;
         margin-right: 30px;
-        color: #2574a9; }
+        color: #4B77Be; }
+
+.container {
+  max-width: 50vw;
+  margin-left: auto;
+  margin-right: auto; }
+
+.title-container {
+  position: absolute;
+  bottom: 8px; }
+
+.icon-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 512px; }
+  .icon-container svg {
+    fill: #36d7b7;
+    width: 10%; }
+
+.img-container {
+  position: relative; }
+
+.center-container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px; }
 
 nav.fixed {
   position: fixed;
   top: 0;
   width: 100%;
   opacity: .6;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #36d7b7;
+  z-index: 999;
   transition: all 0.25s; }
 
-.bottom-arrow {
-  height: 76px; }
-  .bottom-arrow svg {
-    background: #22313f;
-    fill: #2574a9; }
+.decor-top {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 76px;
+  width: 100%; }
+  .decor-top svg {
+    background: transparent;
+    fill: #22313f; }
 
-.img-container {
-  position: relative;
-  width: 256px;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 50px; }
+.decor-bottom {
+  height: 76px; }
+  .decor-bottom svg {
+    background: transparent;
+    fill: #22313f; }
 
 .anim-circle {
-  position: absolute; }
+  position: absolute;
+  background-color: #4B77Be;
+  border-radius: 100%;
+  z-index: 1; }
+
+.effect {
+  position: relative;
+  min-height: 500px;
+  max-height: 500px; }
