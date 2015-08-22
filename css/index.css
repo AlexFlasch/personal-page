@@ -121,13 +121,52 @@ nav {
   position: absolute;
   bottom: 8px; }
 
-.icon-container {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 512px; }
-  .icon-container svg {
-    fill: #36d7b7;
-    width: 10%; }
+.slider {
+  position: relative;
+  width: 100%;
+  opacity: 1;
+  display: flex;
+  margin-top: 150px; }
+  .slider .slider-arrow {
+    display: inline;
+    margin-top: auto;
+    margin-bottom: auto;
+    max-width: 75px; }
+    .slider .slider-arrow .arrow-left {
+      opacity: 0.6;
+      margin-left: 15px; }
+      .slider .slider-arrow .arrow-left svg {
+        width: 70px;
+        height: 100%;
+        fill: transparent;
+        stroke: #36d7b7;
+        stroke-width: 2px; }
+    .slider .slider-arrow .arrow-right {
+      opacity: 0.6; }
+      .slider .slider-arrow .arrow-right svg {
+        width: 70px;
+        height: 100%;
+        fill: transparent;
+        stroke: #36d7b7;
+        stroke-width: 2px; }
+  .slider .slider-wrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    display: flex; }
+    .slider .slider-wrapper .slider-item {
+      margin-left: 25px;
+      margin-right: 25px;
+      display: inline;
+      text-align: center; }
+      .slider .slider-wrapper .slider-item svg {
+        width: 192px;
+        margin-left: 25px;
+        margin-right: 25px;
+        fill: #36d7b7; }
+      .slider .slider-wrapper .slider-item p {
+        max-width: 512px;
+        font-size: 1.25em; }
 
 .img-container {
   position: relative; }

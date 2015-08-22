@@ -172,14 +172,69 @@ nav {
     bottom: 8px;
 }
 
-.icon-container {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 512px;
+.slider {
+    position: relative;
+    width: 100%;
+    opacity: 1;
+    display: flex;
+    margin-top: 150px;
 
-    svg {
-        fill: $accentDark;
-        width: 10%;
+    .slider-arrow {
+        display: inline;
+        margin-top: auto;
+        margin-bottom: auto;
+        max-width: 75px;
+
+        .arrow-left {
+            opacity: 0.6;
+            margin-left: 15px;
+
+            svg {
+                width: 70px;
+                height: 100%;
+                fill: transparent;
+                stroke: $accentDark;
+                stroke-width: 2px;
+            }
+        }
+
+        .arrow-right {
+            opacity: 0.6;
+
+            svg {
+                width: 70px;
+                height: 100%;
+                fill: transparent;
+                stroke: $accentDark;
+                stroke-width: 2px;
+            }
+        }
+    }
+
+    .slider-wrapper {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        display: flex;
+
+        .slider-item {
+            margin-left: 25px;
+            margin-right: 25px;
+            display: inline;
+            text-align: center;
+
+            svg {
+                width: 192px;
+                margin-left: 25px;
+                margin-right: 25px;
+                fill: $accentDark;
+            }
+
+            p {
+                max-width: 512px;
+                font-size: 1.25em;
+            }
+        }
     }
 }
 

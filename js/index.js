@@ -42,6 +42,32 @@ $(document).ready(function() {
 	TweenMax.from(circle0, 0.5, { left: '7.0710678px', top: '7.0710678px', ease: Expo.easeInOut, yoyo: true, repeat: -1, delay: 0.375 });
 	TweenMax.from(circle2, 0.5, { top: '10px', ease: Expo.easeInOut, yoyo: true, repeat: -1, delay: 0.5 });
 
+	//slider things
+	var slider = $('.slider');
+
+	//animate slider arrows
+	var leftArrow = $('.arrow-left');
+	var rightArrow = $('.arrow-right');
+	var leftArrowTween = TweenMax.to(leftArrow, 1, { paused: true, css: { marginLeft: '0px', marginRight: '15px', opacity: '1' }, ease: Power2.easeOut, repeat: 0, delay: 0.1, onUpdate: updateLeft });
+	var rightArrowTween = TweenMax.to(rightArrow, 1, { paused: true, css: { marginLeft: '15px', opacity: '1' }, ease: Power2.easeOut, repeat: 0, delay: 0.1, onUpdate: updateRight });
+
+	$('.slider-arrow > .arrow-left').mouseenter(function() {
+		leftArrowTween.play();
+	}).mouseleave(function(){
+		leftArrowTween.reverse();
+	});
+	$('.slider-arrow > .arrow-right').mouseenter(function() {
+		rightArrowTween.play();
+	}).mouseleave(function(){
+		rightArrowTween.reverse();
+	});
+
+	//animate slider with GSAP also do some logic to make looping happen.
+	var sliderItems = $('.slider-item');
+	var sliderItemWidth = $('.slider-item:nth-child(1)').width();
+
+	TweenMax.from(sliderItems, -1, { left: '-=5px', repeat: -1 });
+
 	//arrow animation
 	var arrow = $('.arrow-down');
 
