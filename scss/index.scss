@@ -14,8 +14,8 @@ body {
 }
 
 body ::selection {
-    background: $primaryDark;
-    color: $secondaryDark;
+    background: $secondaryDark;
+    color: $primaryDark;
 }
 
 .h1 {
@@ -60,6 +60,14 @@ header {
     text-align: center;
 
     ::selection {
+        background: $secondaryDark;
+        color: $primaryDark;
+    }
+    ::-moz-selection {
+        background: $secondaryDark;
+        color: $primaryDark;
+    }
+    ::-webkit-selection {
         background: $secondaryDark;
         color: $primaryDark;
     }
@@ -162,6 +170,12 @@ nav {
 }
 
 .container {
+    max-width: 85vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-container {
     max-width: 50vw;
     margin-left: auto;
     margin-right: auto;

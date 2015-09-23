@@ -48,8 +48,8 @@ $(document).ready(function() {
 	//animate slider arrows
 	var leftArrow = $('.arrow-left');
 	var rightArrow = $('.arrow-right');
-	var leftArrowTween = TweenMax.to(leftArrow, 1, { paused: true, css: { marginLeft: '0px', marginRight: '15px', opacity: '1' }, ease: Power2.easeOut, repeat: 0, delay: 0.1, onUpdate: updateLeft });
-	var rightArrowTween = TweenMax.to(rightArrow, 1, { paused: true, css: { marginLeft: '15px', opacity: '1' }, ease: Power2.easeOut, repeat: 0, delay: 0.1, onUpdate: updateRight });
+	var leftArrowTween = TweenMax.to(leftArrow, 0.25, { paused: true, css: { marginLeft: '0px', marginRight: '15px', opacity: '1' }, ease: Power2.easeOut, repeat: 0, delay: 0.1 });
+	var rightArrowTween = TweenMax.to(rightArrow, 0.25, { paused: true, css: { marginLeft: '15px', opacity: '1' }, ease: Power2.easeOut, repeat: 0, delay: 0.1 });
 
 	$('.slider-arrow > .arrow-left').mouseenter(function() {
 		leftArrowTween.play();
